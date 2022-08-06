@@ -15,9 +15,19 @@ struct LandingPage: View{
                                 .frame(width: 300, height: 150, alignment: .leading)
                                 .font(.system(size: 50, weight: .semibold))
                         }
+                        
+                        VStack{
+                            Text("Active Orders")
+                                .font(.system(size: 50, weight: .bold))
+                            NewsBox(stories: [["Order1","Items"] ,
+                                              ["Order2","Items"] ,
+                                              ["Order3","Items"] ,
+                                              ["Order4","Items"]])
+                        }
+                    
                         VStack{
                             Text("News")
-                                .font(.system(size: 60, weight: .semibold))
+                                .font(.system(size: 50, weight: .bold))
                             NewsBox(stories: [["Title1","Body1"] ,
                                               ["Title2","Body2"] ,
                                               ["Title3","Body3"] ,
