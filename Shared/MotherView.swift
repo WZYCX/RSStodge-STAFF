@@ -5,10 +5,10 @@ import Foundation
 enum Page {
     case LogIn
     case Landing
-    case Menu
-    case Account
     case Orders
-    case Basket
+    case Reports
+    case ManageStock
+    case Account
 }
 
 
@@ -30,14 +30,14 @@ struct MotherView: View{
             LogInPage().colorScheme(.light)
         case .Landing:
             LandingPage().colorScheme(.light)
-        case .Menu:
-            MenuPage().colorScheme(.light)
+        case .Reports:
+            ReportsPage().colorScheme(.light)
         case .Account:
             AccountPage().colorScheme(.light)
         case .Orders:
             OrdersPage().colorScheme(.light)
-        case .Basket:
-            BasketPage().colorScheme(.light)
+        case .ManageStock:
+            ManageStockPage().colorScheme(.light)
             //default:
             //Loading().colorScheme(.light)
         }

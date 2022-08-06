@@ -95,7 +95,7 @@ struct LogInPage: View {
 }
 
 //for canvas to provide preview
-struct LibraryViewPreview: PreviewProvider {
+struct LogInPreview: PreviewProvider {
     
     static var previews: some View {
         LogInPage()
