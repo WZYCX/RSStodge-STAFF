@@ -22,10 +22,10 @@ struct ReportsPage: View{
                                 .frame(width: 300, height: 150, alignment: .leading)
                                 .font(.system(size: 50, weight: .semibold))
                         }
-                        
+                    }
                     Spacer()
                     Footer()
-                    }
+                    
                 }
         }
     }

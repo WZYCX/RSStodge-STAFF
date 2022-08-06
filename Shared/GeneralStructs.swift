@@ -89,7 +89,7 @@ struct HeaderButton: View{
                 
             } else {
                 withAnimation {
-                    viewRouter.currentPage = .Basket
+                    viewRouter.currentPage = .ManageStock
                 }
             }
             
@@ -115,7 +115,7 @@ struct Header: View{
                 HStack{
                     HeaderButton(ButtonSymbol: "arrow.left.to.line.circle.fill", LeadingorTrailing: .leading,isLogOut: true)
                     Spacer()
-                    HeaderButton(ButtonSymbol: "cart.circle.fill", LeadingorTrailing: .trailing, isLogOut: false)
+                    HeaderButton(ButtonSymbol: "square.and.pencil.circle.fill", LeadingorTrailing: .trailing, isLogOut: false)
             }
             
         }.padding(.top,50)
@@ -158,7 +158,7 @@ struct Footer: View{
             Spacer()
             FooterButton(DirectTo: .Landing, ButtonSymbol: "house.fill", Caption: "Home")
             Spacer()
-            FooterButton(DirectTo: .Menu, ButtonSymbol: "takeoutbag.and.cup.and.straw.fill", Caption: "Menu")
+            FooterButton(DirectTo: .Reports, ButtonSymbol: "tray.full.fill", Caption: "Report")
             Spacer()
             FooterButton(DirectTo: .Orders, ButtonSymbol: "list.bullet", Caption: "Orders")
             Spacer()
