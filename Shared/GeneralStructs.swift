@@ -31,6 +31,7 @@ struct RSStodgeLogo: View {
                     .font(.system(size: textSize, weight: .semibold))
                 Text("Stodge")
                     .font(.system(size: textSize, weight: .semibold))
+                //Extra Title for STAF app
                 Text("STAFF")
                     .font(.system(size: textSize, weight: .semibold))
                     .foregroundColor(.red)
