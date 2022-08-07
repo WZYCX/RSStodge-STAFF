@@ -35,6 +35,10 @@ struct LogInPage: View {
                 InputBox(Stuff: "Enter your Email", matchingState: $Email, IsSecure: false)
             
                 InputBox(Stuff: "Enter your Password", matchingState: $Password, IsSecure: true)
+                    .onSubmit {
+                        print("Authenticating")
+                        LogIn()
+                    }
                 
                 Button{
                     LogIn()
@@ -54,12 +58,8 @@ struct LogInPage: View {
                     */
                     
                 }label: {
-                    Text("Confirm")
+                    StdButton("Confirm")
                         .frame(width: 200, height: 50)
-                        .background(.red)
-                        .font(.system(size: 20, weight: .bold))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
                 }
                 
                 //switches to landing page if user is logged in
