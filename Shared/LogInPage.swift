@@ -59,7 +59,6 @@ struct LogInPage: View {
                     
                 }label: {
                     StdButton("Confirm")
-                        .frame(width: 200, height: 50)
                 }
                 
                 //switches to landing page if user is logged in
