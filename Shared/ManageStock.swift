@@ -9,22 +9,36 @@ import SwiftUI
 
 struct ManageStockPage: View{
     
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View{
         ZStack{
             Color.white
                 .ignoresSafeArea()
             VStack{
                 Header()
-                ScrollView(showsIndicators: false){
-                    
-                    VStack(alignment:.leading){
-                        Text("Hi \nWilliam")//placeholder for "Hi \n\(name)"
-                            .frame(width: 300, height: 150, alignment: .leading)
-                            .font(.system(size: 50, weight: .semibold))
+                Text("Stock Manager")//placeholder for "Hi \n\(name)"
+                    .font(.system(size: 50, weight: .semibold))
+                Spacer()
+                VStack {
+                
+                    Button{
+                        print("Add new item")
+                        viewRouter.currentPage = .AddNewItem
+                    } label: {
+                        StdButton("Add New Item")
                     }
+                    
+                    Button{
+                        print("View Current Menu")
+                        viewRouter.currentPage = .Menu
+                    } label: {
+                        StdButton("View Current Menu")
+                    }
+                    
                 }
-            Spacer()
-            Footer()
+                Spacer()
+                Footer()
             }
         }
     }
