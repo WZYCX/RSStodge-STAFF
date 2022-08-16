@@ -17,9 +17,8 @@ struct ReportsPage: View{
                     Header()
                     ScrollView(showsIndicators: false){
                         
-                        VStack(alignment:.leading){
-                            Text("Hi \nWilliam")//placeholder for "Hi \n\(name)"
-                                .frame(width: 300, height: 150, alignment: .leading)
+                        VStack{
+                            Text("Reports")//placeholder for "Hi \n\(name)"
                                 .font(.system(size: 50, weight: .semibold))
                         }
                     }
