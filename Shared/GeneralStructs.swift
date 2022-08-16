@@ -69,6 +69,7 @@ struct InputBox: View{
 
 struct HeaderButton: View{
     
+    var DirectTo: Page
     var ButtonSymbol: String
     var LeadingorTrailing: Edge.Set
     var isLogOut: Bool
@@ -89,7 +90,7 @@ struct HeaderButton: View{
                 
             } else {
                 withAnimation {
-                    viewRouter.currentPage = .ManageStock
+                    viewRouter.currentPage = DirectTo
                 }
             }
             
@@ -108,14 +109,25 @@ struct HeaderButton: View{
 
 struct Header: View{
     
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View{
         
         ZStack{
             RSStodgeLogo(textSize: 20, ImageSize: 50)
                 HStack{
-                    HeaderButton(ButtonSymbol: "arrow.left.to.line.circle.fill", LeadingorTrailing: .leading,isLogOut: true)
-                    Spacer()
-                    HeaderButton(ButtonSymbol: "square.and.pencil.circle.fill", LeadingorTrailing: .trailing, isLogOut: false)
+                    if viewRouter.currentPage == .AddNewItem || viewRouter.currentPage == .Menu {
+                        
+                        HeaderButton(DirectTo:.ManageStock, ButtonSymbol: "arrow.uturn.left.circle.fill", LeadingorTrailing: .leading, isLogOut: false)
+                        Spacer()
+                        
+                    } else {
+                        
+                        HeaderButton(DirectTo:.LogIn, ButtonSymbol: "arrow.left.to.line.circle.fill", LeadingorTrailing: .leading, isLogOut: true)
+                        Spacer()
+                        HeaderButton(DirectTo:.ManageStock, ButtonSymbol: "square.and.pencil.circle.fill", LeadingorTrailing: .trailing, isLogOut: false)
+                        
+                    }
             }
             
         }.padding(.top,50)
@@ -172,6 +184,20 @@ struct Footer: View{
             
     }
 }
+
+//set the StdButton(text: "") to the standard
+func StdButton(_ text: String) -> some View {
+        let text = Text(text)
+        .frame(width: 200, height: 50)
+        .background(.red)
+        .font(.system(size: 20, weight: .bold))
+        .foregroundColor(.white)
+        .cornerRadius(10)
+        .padding()
+        
+        return text
+}
+
 
 //landing
 
