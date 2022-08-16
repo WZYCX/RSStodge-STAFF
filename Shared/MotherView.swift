@@ -9,6 +9,8 @@ enum Page {
     case Reports
     case ManageStock
     case Account
+    case AddNewItem
+    case Menu
 }
 
 
@@ -38,6 +40,10 @@ struct MotherView: View{
             OrdersPage().colorScheme(.light)
         case .ManageStock:
             ManageStockPage().colorScheme(.light)
+        case .AddNewItem:
+            AddNewItemPage().colorScheme(.light)
+        case .Menu:
+            MenuPage().colorScheme(.light)
             //default:
             //Loading().colorScheme(.light)
         }
