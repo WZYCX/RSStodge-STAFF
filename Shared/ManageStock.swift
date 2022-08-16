@@ -29,6 +29,10 @@ struct ManageStockPage: View{
                         StdButton("Add New Item")
                     }
                     
+                    //set size Spacer
+                    Spacer()
+                        .frame(height:20)
+                    
                     Button{
                         print("View Current Menu")
                         viewRouter.currentPage = .Menu
