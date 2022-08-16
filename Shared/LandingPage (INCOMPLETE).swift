@@ -24,7 +24,8 @@ struct LandingPage: View{
                                               ["Order3","Items"] ,
                                               ["Order4","Items"]])
                         }
-                    
+                        .padding(.bottom,10)
+                        
                         VStack{
                             Text("News")
                                 .font(.system(size: 50, weight: .bold))
