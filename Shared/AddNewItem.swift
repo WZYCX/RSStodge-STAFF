@@ -9,13 +9,16 @@ import SwiftUI
 
 struct AddNewItemPage: View {
     var body: some View {
-        VStack{
-            Header()
-            
-            Text("Add New Item")//placeholder for "Hi \n\(name)"
-                .font(.system(size: 50, weight: .semibold))
-            
-            Spacer()
+        ZStack{
+            Color.white
+            VStack{
+                Header()
+                
+                Text("Add New Item")//placeholder for "Hi \n\(name)"
+                    .font(.system(size: 50, weight: .semibold))
+                
+                Spacer()
+            }
         }
     }
 }
