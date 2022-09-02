@@ -98,7 +98,7 @@ struct HeaderButton: View{
             Image(systemName: ButtonSymbol)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 60)
+                .frame(width: 50)
         }
         .padding(LeadingorTrailing,10)
         .padding(.top,5)
@@ -114,7 +114,7 @@ struct Header: View{
     var body: some View{
         
         ZStack{
-            RSStodgeLogo(textSize: 20, ImageSize: 50)
+            RSStodgeLogo(textSize: 16, ImageSize: 40)
                 HStack{
                     if viewRouter.currentPage == .AddNewItem || viewRouter.currentPage == .Menu {
                         
@@ -153,11 +153,11 @@ struct FooterButton: View{
                 Image(systemName: ButtonSymbol)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 40,height: 40)
+                    .frame(width: 30)
                     .foregroundColor(.white)
             }
             Text(Caption)
-                .font(.system(size: 12, weight: .bold))
+                .font(.system(size: 10, weight: .bold))
                 .foregroundColor(.white)
         }
     }
@@ -168,6 +168,7 @@ struct Footer: View{
         
         HStack{
             Spacer()
+                .frame(width: 40)
             FooterButton(DirectTo: .Landing, ButtonSymbol: "house.fill", Caption: "Home")
             Spacer()
             FooterButton(DirectTo: .Reports, ButtonSymbol: "tray.full.fill", Caption: "Report")
@@ -176,11 +177,12 @@ struct Footer: View{
             Spacer()
             FooterButton(DirectTo: .Account, ButtonSymbol: "person.circle", Caption: "Account")
             Spacer()
+                .frame(width: 40)
             // to be completed
         }.frame(maxWidth:.infinity)
             .frame(height: 100)
             .background(.red)
-            .cornerRadius(10, corners:[.topLeft,.topRight])
+            //.cornerRadius(10, corners:[.topLeft,.topRight])
             
     }
 }
