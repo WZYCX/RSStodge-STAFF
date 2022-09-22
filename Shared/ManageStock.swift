@@ -34,10 +34,10 @@ struct ManageStockPage: View{
                         .frame(height:20)
                     
                     Button{
-                        print("View Current Menu")
+                        print("Preview Menu")
                         viewRouter.currentPage = .Menu
                     } label: {
-                        StdButton("View Current Menu")
+                        StdButton("Preview Menu")
                     }
                     
                 }
