@@ -24,7 +24,9 @@ struct ManageStockPage: View{
                 
                     Button{
                         print("Add new item")
-                        viewRouter.currentPage = .AddNewItem
+                        withAnimation{
+                            viewRouter.currentPage = .AddNewItem
+                        }
                     } label: {
                         StdButton("Add New Item")
                     }
@@ -35,7 +37,9 @@ struct ManageStockPage: View{
                     
                     Button{
                         print("Preview Menu")
-                        viewRouter.currentPage = .Menu
+                        withAnimation{
+                            viewRouter.currentPage = .Menu
+                        }
                     } label: {
                         StdButton("Preview Menu")
                     }
